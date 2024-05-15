@@ -67,7 +67,7 @@ class DataBase:
                 )
                 await db.commit()
 
-TOKEN = '7140820903:AAG4iCDYNXWoe3-1I0pEqONrDL3vMQgaOAQ'
+TOKEN = ''
 
 router = Router()
 
