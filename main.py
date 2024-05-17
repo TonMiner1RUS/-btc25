@@ -38,7 +38,7 @@ async def handler(message: Message, state: FSMContext, command: CommandObject):
     
     await state.update_data(invited_id=reference)
     
-    bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    bot = Bot(configreader.BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     link = await create_start_link(bot,str(message.from_user.id), encode=True)
     
     await message.answer(f'Play game!!!\nYou referral link: {link}',
@@ -52,7 +52,7 @@ async def handler(message: Message, state: FSMContext, command: CommandObject):
 
 @router.message(Command("Ref"))
 async def referral(message: Message):
-    bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    bot = Bot(configreader.BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     link = await create_start_link(bot,str(message.from_user.id), encode=True)
 
     await message.answer(f"You referral link: {link}")
