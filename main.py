@@ -17,11 +17,6 @@ from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 
 
-
-   
-
-TOKEN = '7140820903:AAG4iCDYNXWoe3-1I0pEqONrDL3vMQgaOAQ'
-
 router = Router()
 
 
